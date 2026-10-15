@@ -1,0 +1,13 @@
+{
+  "name": "@smartpark-ai/shared",
+  "version": "1.0.0",
+  "description": "SmartPark AI shared types, schemas, and contracts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Run Health & System Diagnostics",
+      "type": "shell",
+      "command": "node scripts/diagnostics.js",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Start Backend API (Port 5001)",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Start ML Prediction Service (Port 8000)",
+      "type": "shell",
+      "command": "./venv/bin/uvicorn main:app --app-dir src --host 127.0.0.1 --port 8000",
+      "options": {
+        "cwd": "${workspaceFolder}/ml-service"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "4. Start Admin Dashboard (Port 3000)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/admin-dashboard"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "5. Start Mobile in iOS Simulator (Fast-Boot)",
+      "type": "shell",
+      "command": "npm run ios",
+      "options": {
+        "cwd": "${workspaceFolder}/mobile",
+        "env": {
+          "REACT_NATIVE_PACKAGER_HOSTNAME": "127.0.0.1",
+          "EXPO_USE_LOCAL_CLI": "1"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "6. Run ML Training",
+      "type": "shell",
+      "command": "./venv/bin/python src/train.py",
+      "options": {
+        "cwd": "${workspaceFolder}/ml-service"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "7. Seed Development Database",
+      "type": "shell",
+      "command": "./node_modules/.bin/tsx src/seed.ts",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "SmartPark AI",
+    "slug": "smartpark-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/smartpark-logo.png",
+    "scheme": "smartparkai",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/smartpark-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#071D42"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartpark.ai"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/smartpark-logo.png",
+        "backgroundColor": "#071D42"
+      },
+      "package": "com.smartpark.ai"
+    },
+    "web": {
+      "favicon": "./assets/images/smartpark-logo.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "SmartPark AI needs location permission to display nearby IT park facilities."
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "model_version": "rf-v1.0.0",
+  "trained_at": "2026-10-15T08:12:21.018618+00:00",
+  "model_type": "RandomForestRegressor",
+  "hyperparameters": {
+    "n_estimators": 75,
+    "max_depth": 12,
+    "min_samples_split": 4,
+    "random_state": 42
+  },
+  "features": [
+    "hour",
+    "day_of_week",
+    "is_weekend",
+    "current_occupancy_pct",
+    "total_capacity",
+    "reservations_count",
+    "recent_arrivals",
+    "recent_departures"
+  ],
+  "dataset": {
+    "path": "data/synthetic_it_park_occupancy.csv",
+    "total_records": 4320,
+    "is_synthetic": true,
+    "train_samples": 3456,
+    "test_samples": 864
+  },
+  "metrics": {
+    "random_forest": {
+      "mae": 0.878,
+      "rmse": 1.214,
+      "r2": 0.999
+    },
+    "baseline_persistence": {
+      "mae": 5.005,
+      "rmse": 7.051,
+      "r2": 0.954
+    }
+  }
+}

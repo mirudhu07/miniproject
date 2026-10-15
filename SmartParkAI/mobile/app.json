@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "SmartPark AI",
+    "slug": "smartpark-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/smartpark-logo.png",
+    "scheme": "smartparkai",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/smartpark-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#071D42"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartparkai.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/smartpark-logo.png",
+        "backgroundColor": "#071D42"
+      },
+      "package": "com.smartparkai.mobile"
+    },
+    "web": {
+      "favicon": "./assets/images/smartpark-logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-asset"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Backend API (Express)",
+      "runtimeExecutable": "${workspaceFolder}/backend/node_modules/.bin/tsx",
+      "args": ["src/index.ts"],
+      "cwd": "${workspaceFolder}/backend",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "python",
+      "request": "launch",
+      "name": "ML Service (FastAPI)",
+      "module": "uvicorn",
+      "args": ["main:app", "--app-dir", "src", "--host", "127.0.0.1", "--port", "8000"],
+      "cwd": "${workspaceFolder}/ml-service",
+      "python": "${workspaceFolder}/ml-service/venv/bin/python",
+      "console": "integratedTerminal"
+    }
+  ]
+}
